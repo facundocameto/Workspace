@@ -40,16 +40,16 @@
 </head>
 
 <body class="text-center">
-<form method="post">
+<form>
   <div class="titular"><div class="letter-box">
     <p class="letter-text">eM</p>
   </div>
   <div class="tit-login"><h1 class="tit-login_let">Ingresa tus datos para entrar en eMercado!</h1></div></div>
   <div class="insert-login">
-    <input class="arg-login" type="email" name="email" value="" placeholder="Ingresa tu email" required>
-    <input class="arg-login" type="password" name="password" value="" placeholder="Ingresa tu contraseña" required>
+    <input id="email" class="arg-login" type="email" name="email" value="" placeholder="Ingresa tu email" required>
+    <input id="password" class="arg-login" type="password" name="password" value="" placeholder="Ingresa tu contraseña" required>
     <label><input type="checkbox" name="checkbox" value=""> Recuerda mi contraseña</label>
-    <button class="arg-login submit" type="submit" name="submit" id="log_but">Ingresar</button>
+    <button class="arg-login submit" type="button" name="submit" onclick="validate()">Ingresar</button>
   </div>
 </form>
 <div class="footer">
