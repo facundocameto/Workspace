@@ -10,9 +10,7 @@ function redireccion(){
   if (logueado == "false") {
     window.location.replace("./login.html");
   }else if (logueado != "true"){
-    alert('Debe iniciar sesión')
     window.location.replace("./login.html");
-
   }
 }
 
