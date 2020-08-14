@@ -78,6 +78,20 @@ input
   border-bottom: solid hotpink;
   color: #696969;
 }
+.b_img
+{
+  /* The image used */
+  background-image: url("../img/login_back1.png");
+
+  /* Full height */
+  height: 100%;
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media all and (max-width: 400px) {
     .letter-box{
         top: 10%;
@@ -106,5 +120,15 @@ input
 @media all and (max-height: 700px) {
     .tit-login_let{
         font-size: 2rem;
+    }
+}
+@media all and (max-width: 400px) {
+    .footer{
+        display: none;
+    }
+}
+@media all and (max-height: 700px) {
+    .footer{
+        display: none;
     }
 }
