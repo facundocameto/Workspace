@@ -2,14 +2,13 @@
 {
   position: absolute;
   left: 50%;
-  width: 70px;
-  height: 70px;
+  width: 470px;
   text-align: center;
   background-color: hotpink;
-  padding: 10px;
+  padding: 4px;
   border-radius: 4px;
   transform: translateX(-50%);
-  top: 20%;
+  top: 5%;
 }
 .letter-text
 {
@@ -80,14 +79,11 @@ input
 }
 .b_img
 {
-  /* The image used */
   background-image: url("../img/login_back1.png");
 
-  /* Full height */
   height: 100%;
   width: 100%;
 
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -122,13 +118,18 @@ input
         font-size: 2rem;
     }
 }
-@media all and (max-width: 400px) {
-    .footer{
+@media all and (max-width: 470px) {
+    .footer, .letter-box{
         display: none;
     }
 }
 @media all and (max-height: 700px) {
-    .footer{
+    .footer, .letter-box{
+        display: none;
+    }
+}
+@media all and (max-width: 300px) {
+    .b_img{
         display: none;
     }
 }
