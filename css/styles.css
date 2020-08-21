@@ -139,3 +139,17 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+#collapseExample
+{
+  color: white;
+  list-style: none;
+}
+.desp
+{
+  margin: 0px;
+  user-select: none;
+}
+#arrow_img
+{
+  cursor: pointer;
+}
