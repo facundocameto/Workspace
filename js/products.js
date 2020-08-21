@@ -86,14 +86,12 @@ function sortAndShowProducts(sortCriteria, productsArray){
 }
 
 function searchfor() {
-  // Declare variables
   var input, filter, li, a, i, txtValue;
   input = document.getElementById('search-bar');
   var cont = document.getElementById("prod-list-container")
   filter = input.value.toUpperCase();
   li = cont.getElementsByTagName('a');
 
-  // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("h4")[0];
     txtValue = a.textContent || a.innerText;
