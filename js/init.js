@@ -6,6 +6,7 @@ const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
+let user = sessionStorage.getItem("estaLogueado");
 
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
@@ -44,4 +45,30 @@ var getJSONData = function(url){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
+  var usuario = document.getElementById("usuario");
+  usuario.innerHTML = user;
+  collapseExample.style.maxHeight = "0px";
 });
+var asd = "";
+var collapseExample = document.getElementById("collapseExample");
+
+function rotate()
+{
+  var arrow_img = document.getElementById("arrow_img");
+  if (asd === "" || asd === "1")
+  {
+    asd = "0";
+    arrow_img.style.transform = "rotate(180deg)";
+    collapseExample.style.maxHeight = "140px";
+  }
+  else {
+    asd = "1";
+    arrow_img.style.transform = "rotate(0deg)";
+    collapseExample.style.maxHeight = "0px";
+  }
+}
+function delete_key()
+{
+  sessionStorage.clear();
+  window.location.replace("./login.html");
+}

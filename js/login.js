@@ -1,4 +1,4 @@
-var userid = document.getElementById("user")
+var userid = document.getElementById("user");
 function validate() {
   var user = document.getElementById("user").value;
   var email = document.getElementById("email").value;

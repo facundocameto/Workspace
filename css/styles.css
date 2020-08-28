@@ -139,7 +139,7 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
-#collapseExample
+.lista
 {
   color: white;
   list-style: none;
@@ -148,8 +148,19 @@ a.custom-card:hover {
 {
   margin: 0px;
   user-select: none;
+  padding: 10px;
 }
 #arrow_img
 {
   cursor: pointer;
+  transition: 0.5s;
+}
+.pan_desp
+{
+  position: fixed;
+  background-color: #343a40;
+  padding: 0px;
+  width: 140px;
+  transition: 1s;
+  overflow: hidden;
 }
