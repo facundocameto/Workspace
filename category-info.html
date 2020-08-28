@@ -22,7 +22,14 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <div style="user-select: none;"><a class="py-2 d-none d-md-inline-block"><img id="arrow_img" onclick="rotate()" style="margin-right: 6px;" src="img/down-arrow.png" width="12px"></a>
+        <a class="py-2 d-none d-md-inline-block" style="color: white; cursor: pointer;" onclick="rotate()" id="usuario" class="py-2 d-none d-md-inline-block"></a><div id="collapseExample" class="pan_desp">
+          <ul id="desp" class="desp">
+            <li class="lista"><a class="lista" href="cart.html">Carrito</a></li>
+            <li class="lista"><a class="lista" href="my-profile.html">Mi perfil</a></li>
+            <hr style="border-color: white;" />
+            <li class="lista"><a class="lista" onclick="delete_key()" href="#">Cerrar sesión</a></li>
+    </ul></div></div>
     </div>
   </nav>
   <main role="main">
@@ -79,6 +86,7 @@
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/redireccion.js"></script>
   <script src="js/init.js"></script>
   <script src="js/category-info.js"></script>
 </body>
