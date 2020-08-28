@@ -86,15 +86,15 @@ function sortAndShowProducts(sortCriteria, productsArray){
 }
 
 function searchfor() {
-  var input, filter, li, a, i, txtValue;
+  var input, filter, li, h, i, txtValue;
   input = document.getElementById('search-bar');
   var cont = document.getElementById("prod-list-container")
   filter = input.value.toUpperCase();
   li = cont.getElementsByTagName('a');
 
   for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("h4")[0];
-    txtValue = a.textContent || a.innerText;
+    h = li[i].getElementsByTagName("h4")[0];
+    txtValue = h.textContent || h.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";
     } else {
