@@ -66,15 +66,36 @@ document.addEventListener("DOMContentLoaded", function(e){
             let productNameHTML  = document.getElementById("productName");
             let productDescriptionHTML = document.getElementById("productDescription");
             let productCountHTML = document.getElementById("productCount");
-            let productCriteriaHTML = document.getElementById("productCriteria");
+            let productPriceHTML = document.getElementById("productPrice");
 
             productNameHTML.innerHTML = product[num].name;
             productDescriptionHTML.innerHTML = product[num].description;
             productCountHTML.innerHTML = product[num].soldCount;
-            productCriteriaHTML.innerHTML = product[num].currency + " " + product[num].cost;
+            productPriceHTML.innerHTML = product[num].currency + " " + product[num].cost;
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(product[num].images);
         }
     });
+
+  getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
+    if (resultObj.status === "ok"){
+      comment = resultObj.data;
+
+      let htmlContentToAppend = "";
+
+      for(let i = 0; i < comment.length; i++){
+
+          htmlContentToAppend += `
+          <div>
+              <div>
+                  <p>` + comment[i].description + `</p>
+              </div>
+          </div>
+          `
+
+          document.getElementById("comments").innerHTML = htmlContentToAppend;
+      }
+    }
+  });
 });

@@ -13,6 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/product-info.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,34 +35,31 @@
   </nav>
   <main role="main">
     <div class="container mt-5">
-      <div class="text-center p-4">
-        <h2>Descripción del producto</h2>
-        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
-      </div>
       <h3 id="productName"></h3>
       <hr class="my-3">
       <dl>
-        <dt>Descripción</dt>
+        <div class="product-description"><dt class="description-title">Descripción</dt>
         <dd>
           <p id="productDescription"></p>
-        </dd>
+        </dd></div>
 
-        <dt>Productos vendidos</dt>
+        <div class="product-count"><dt>Productos vendidos</dt>
         <dd>
           <p id="productCount"></p>
-        </dd>
+        </dd></div>
 
-        <dt>Precio</dt>
+        <div class="product-price"><dt class="price-title">Precio</dt>
         <dd>
-          <p id="productCriteria"></p>
-        </dd>
+          <p id="productPrice"></p>
+        </dd></div>
 
-        <dt>Imágenes ilustrativas</dt>
+        <div><dt class="images-title">Imágenes ilustrativas</dt>
         <dd>
           <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
           </div>
-        </dd>
+        </dd></div>
       </dl>
+      <div id="comments"></div>
       <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>
   </main>

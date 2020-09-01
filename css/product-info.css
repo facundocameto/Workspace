@@ -1,0 +1,42 @@
+#productName
+{
+  text-align: center;
+  font-size: 50px;
+}
+.my-3
+{
+  border-color: deeppink;
+}
+.product-description
+{
+  width: 80%;
+  float: left;
+}
+.description-title
+{
+  font-size: 20px;
+}
+.product-count
+{
+  text-align: right;
+}
+.product-price
+{
+  clear: left;
+}
+.price-title
+{
+  font-size: 25px;
+  width: fit-content;
+  border-bottom: 1px solid green;
+}
+#productPrice
+{
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+.images-title
+{
+  font-size: 25px;
+  border-bottom: 1px solid deeppink;
+}
