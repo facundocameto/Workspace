@@ -175,3 +175,7 @@ a.custom-card {
   z-index: 2;
   background-color: white;
 }
+.list-group-item
+{
+  cursor: pointer;
+}
