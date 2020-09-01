@@ -130,10 +130,11 @@ footer p {
   display: none;
 }
 
-a.custom-card,
-a.custom-card:hover {
+a.custom-card {
   color: inherit;
   text-decoration: inherit;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .checked {
@@ -163,4 +164,14 @@ a.custom-card:hover {
   width: 140px;
   transition: 1s;
   overflow: hidden;
+}
+.bd-placeholder-img:hover
+{
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+.card-down-info
+{
+  z-index: 2;
+  background-color: white;
 }
