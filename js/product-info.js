@@ -2,6 +2,24 @@ var product = [];
 
 function showImagesGallery(array){
 
+  var name = localStorage.getItem("item");
+  if (name === "Chevrolet Onix Joy")
+  {
+    var num = 0;
+  }
+  else if (name === "Fiat Way")
+  {
+    var num = 1;
+  }
+  else if (name === "Suzuki Celerio")
+  {
+    var num = 2;
+  }
+  else
+  {
+    var num = 3;
+  }
+
     let htmlContentToAppend = "";
 
     for(let i = 0; i < array.length; i++){
@@ -10,7 +28,7 @@ function showImagesGallery(array){
         htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
             <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + product[0].images[i] + `" alt="">
+                <img class="img-fluid img-thumbnail" src="` + product[num].images[i] + `" alt="">
             </div>
         </div>
         `
