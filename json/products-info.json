@@ -32,7 +32,8 @@
       },
       {
           "name": "Peugeot 208",
-          "description": "El modelo de auto que se sigue renovando y manteniendo su prestigio en comodidad.",
+          "description": "El modelo de auto que se sigue renovando y manteniendo su prestigio en comodidad. \n
+          Genuinamente práctico y decididamente versátil, el Peugeot 2008 ofrece una perfecta combinación de virtudes desde su habitabilidad, posición de manejo y performance para potenciar el driving experience característico de Peugeot.",
           "cost": 15200,
           "currency": "USD",
           "images": ["img/prod4.jpg"],

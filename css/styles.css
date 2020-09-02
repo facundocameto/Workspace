@@ -164,6 +164,7 @@ a.custom-card {
   width: 140px;
   transition: 1s;
   overflow: hidden;
+  top: 48px;
 }
 .bd-placeholder-img:hover
 {

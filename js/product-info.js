@@ -87,11 +87,10 @@ document.addEventListener("DOMContentLoaded", function(e){
       for(let i = 0; i < comment.length; i++){
 
           htmlContentToAppend += `
-          <div>
-              <div>
-                  <p>` + comment[i].description + `</p>
-              </div>
-          </div>
+            <div class="comment-section">
+              <h5 class="left-user">` + comment[i].user + ` - <span class="score">` + comment[i].score + `/5</span>` + `</h5><p class="right-datetime">` + comment[i].dateTime + `</p>
+                <p class="comment-left">` + comment[i].description + `</p>
+            </div>
           `
 
           document.getElementById("comments").innerHTML = htmlContentToAppend;

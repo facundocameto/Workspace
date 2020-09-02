@@ -40,3 +40,24 @@
   font-size: 25px;
   border-bottom: 1px solid deeppink;
 }
+.left-user
+{
+  float: left;
+}
+.right-datetime
+{
+  text-align: right;
+}
+.comment-left
+{
+  clear: both;
+}
+.score
+{
+  color: green;
+  font-size: 25px;
+}
+.comment-section
+{
+  margin-bottom: 40px;
+}
