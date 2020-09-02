@@ -16,7 +16,7 @@
 },
 {
         "name": "Fiat Way",
-        "description": "La versión de Fiat que brinda confort y a un precio accesible.",
+        "description": "La versión de Fiat que brinda confort y a un precio accesible. \u003cbr\u003eEs un vehículo osado y singular en sus conceptos y sus líneas. Desde su llegada sorprendió por su diseño y funcionalidades. A su vez, sus molduras en las puertas y sus fenders le aportan robustez a su diseño sin quitarle elegancia. Mientras tanto, sus rieles portaequipaje en el techo le otorgan un look más agresivo con personalidad off road. Evo Way está listo para recorrer cualquier camino.",
         "cost": 14500,
         "currency": "USD",
         "images": ["img/prod2.jpg"],
@@ -24,10 +24,10 @@
     },
     {
           "name": "Suzuki Celerio",
-          "description": "Un auto que se ha ganado la buena fama por su economía con el combustible.",
+          "description": "Un auto que se ha ganado la buena fama por su economía con el combustible. \u003cbr\u003eSu espacio interior y la elevación de sus asientos ofrecen una experiencia única de confort para el disfrute de su andar.Tan seguro como todo Suzuki e increíblemente eficiente energéticamente",
           "cost": 12500,
           "currency": "USD",
-          "images": ["img/prod3.jpg"],
+          "images": ["img/prod4.jpg"],
           "soldCount": 25
       },
       {
@@ -35,6 +35,6 @@
           "description": "El modelo de auto que se sigue renovando y manteniendo su prestigio en comodidad. \u003cbr\u003eGenuinamente práctico y decididamente versátil, el Peugeot 2008 ofrece una perfecta combinación de virtudes desde su habitabilidad, posición de manejo y performance para potenciar el driving experience característico de Peugeot.",
           "cost": 15200,
           "currency": "USD",
-          "images": ["img/prod4.jpg"],
+          "images": ["img/prod3.jpg"],
           "soldCount": 17
       }]
