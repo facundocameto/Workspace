@@ -35,6 +35,22 @@ function showImagesGallery(array){
 
         document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
     }
+
+    let htmlContentToAppend2 = "";
+
+    for(let i = 0; i < array.length; i++){
+        let imageSrc = array[i];
+
+        htmlContentToAppend2 += `
+        <div class="col-lg-3 col-md-4 col-6">
+            <div class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="` + product[num].images[relatedProducts] + `" alt="">
+            </div>
+        </div>
+        `
+
+        document.getElementById("relatedProducts").innerHTML = htmlContentToAppend2;
+    }
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de

@@ -12,7 +12,7 @@
         "img/prod1_3.jpg",
         "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [2, 3]
 },
 {
         "name": "Fiat Way",
@@ -24,7 +24,8 @@
           "img/prod2_1.jpg",
           "img/prod2_2.jpg"
         ],
-        "soldCount": 52
+        "soldCount": 52,
+        "relatedProducts": [1, 3]
     },
     {
           "name": "Suzuki Celerio",
@@ -36,7 +37,8 @@
             "img/prod4_1.jpg",
             "img/prod4_2.jpg"
           ],
-          "soldCount": 25
+          "soldCount": 25,
+          "relatedProducts": [1, 3]
       },
       {
           "name": "Peugeot 208",
@@ -49,5 +51,6 @@
             "img/prod3_2.jpg",
             "img/prod3_3.jpg"
           ],
-          "soldCount": 17
+          "soldCount": 17,
+          "relatedProducts": [1, 4]
       }]
