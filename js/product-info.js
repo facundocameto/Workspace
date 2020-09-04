@@ -63,7 +63,7 @@ function showRelatedProducts(array, products)
 
       htmlContentToAppend2 += `
       <div class="col-lg-3 col-md-4 col-6">
-          <div class="d-block mb-4 h-100">
+          <div class="pointer d-block mb-4 h-100">
               <a onclick="loadProduct(` + imageSrc + `)"><img class="img-fluid img-thumbnail" src="` + products[imageSrc].imgSrc + `" alt=""></a>
           </div>
       </div>
