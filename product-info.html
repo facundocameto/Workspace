@@ -66,10 +66,10 @@
       </dl>
       <div><div> <h3>Comentarios</h3> </div>
       <hr style="border-color: grey;" />
-      <form class="row" name="commentForm" method="post">
-        <input class="col-md-6" id="score" type="number" name="score"><br>
-        <textarea id="text" name="comment" form="commentForm"></textarea>
-        <button type="button" id="formButton" name="button">Boton</button>
+      <form name="commentForm" method="post">
+        <label>Puntaje <input placeholder="del 1 al 5" class="ml-2 border border-dark rounded w-5 mb-2 h-25" id="score" type="number" name="score"></label><br>
+        <label>Comentario </label><br><textarea class="rounded border border-dark w-50 mb-2 h-20" id="text" name="comment" form="commentForm"></textarea><br>
+        <button class="mb-4 btn btn-success" type="button" id="formButton" name="button">Enviar</button>
       </form>
       <div id="myComments"></div>
       <div id="comments"></div>

@@ -2,9 +2,21 @@ var formButton = document.getElementById("formButton");
 var htmlContentToAppend = sessionStorage.getItem("multipleComments");
 document.getElementById("myComments").innerHTML = htmlContentToAppend;
 formButton.addEventListener("click", createComment);
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '-' + dd + '-' + yyyy;
+
 function createComment(){
+  var scoreTxt = document.getElementById("score").value;
 
-
+if (scoreTxt > 0 && scoreTxt <= 5)
+{
+  if (htmlContentToAppend == null)
+  {
+    htmlContentToAppend = "";}
       // this is how you set it
     var newComment = new Object();
     comment=[];
@@ -25,7 +37,7 @@ function createComment(){
 
           htmlContentToAppend += `
             <div class="comment-section">
-              <h5 class="left-user">` + user + ` - <span class="score">` + fullComment[0].score + `/5</span>` + `</h5><p class="right-datetime">` + fullComment.dateTime + `</p>
+              <h5 class="left-user">` + user + ` - <span class="score">` + fullComment[0].score + `/5</span>` + `</h5><p class="right-datetime">` + today + `</p>
                 <p class="comment-left">` + fullComment[0].text + `</p>
             </div>
           `
@@ -33,5 +45,7 @@ function createComment(){
           document.getElementById("myComments").innerHTML = htmlContentToAppend;
           sessionStorage.setItem("multipleComments", htmlContentToAppend);
 
-
+}
+document.getElementById("score").value = "";
+document.getElementById("text").value = "";
 }
