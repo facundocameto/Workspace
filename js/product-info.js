@@ -104,22 +104,22 @@ document.addEventListener("DOMContentLoaded", function(e){
             if (name === "Chevrolet Onix Joy")
             {
               var num = 0;
-              var letter = "C";
+              var letter = PRODUCT_INFO_COMMENTS_URL_C;
             }
             else if (name === "Fiat Way")
             {
               var num = 1;
-              var letter = "F";
+              var letter = PRODUCT_INFO_COMMENTS_URL_F;
             }
             else if (name === "Suzuki Celerio")
             {
               var num = 2;
-              var letter = "S";
+              var letter = PRODUCT_INFO_COMMENTS_URL_S;
             }
             else
             {
               var num = 3;
-              var letter = "Z";
+              var letter = PRODUCT_INFO_COMMENTS_URL_P;
             }
 
             let productNameHTML  = document.getElementById("productName");
@@ -134,12 +134,9 @@ document.addEventListener("DOMContentLoaded", function(e){
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(product[num].images);
-        }
-    );
 
-    var product_info_comment = PRODUCT_INFO_COMMENTS_URL_ + letter;
 
-  getJSONData(product_info_comment).then(function(resultObj){
+  getJSONData(letter).then(function(resultObj){
     if (resultObj.status === "ok"){
       comment = resultObj.data;
 
@@ -157,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function(e){
           document.getElementById("comments").innerHTML = htmlContentToAppend;
       }
     }
-  })};
+  })}});
 
   getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
     if (resultObj.status === "ok"){
