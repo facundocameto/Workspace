@@ -4,7 +4,7 @@ document.getElementById("myComments").innerHTML = htmlContentToAppend;
 formButton.addEventListener("click", createComment);
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var mm = String(today.getMonth() + 1).padStart(2, '0');
 var yyyy = today.getFullYear();
 
 today = mm + '-' + dd + '-' + yyyy;
@@ -17,7 +17,6 @@ if (scoreTxt > 0 && scoreTxt <= 5)
   if (htmlContentToAppend == null)
   {
     htmlContentToAppend = "";}
-      // this is how you set it
     var newComment = new Object();
     comment=[];
 
@@ -27,7 +26,6 @@ if (scoreTxt > 0 && scoreTxt <= 5)
     comment.push(newComment);
     sessionStorage.setItem('comment', JSON.stringify(comment));
 
-       // this is how you will retrive it
 
     var retrievedObject = sessionStorage.getItem('comment');
     console.log('retrievedObject: ', JSON.parse(retrievedObject));
