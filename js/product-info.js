@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             //Muestro las imagenes en forma de galería
             showImagesGallery(product[num].images);
         }
-    });
+    );
 
     var product_info_comment = PRODUCT_INFO_COMMENTS_URL_ + letter;
 
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function(e){
           document.getElementById("comments").innerHTML = htmlContentToAppend;
       }
     }
-  });
+  })};
 
   getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
     if (resultObj.status === "ok"){
