@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
     });
 
-  getJSONData(PRODUCT_INFO_COMMENTS_URL_ + letter).then(function(resultObj){
+  getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
     if (resultObj.status === "ok"){
       comment = resultObj.data;
 
