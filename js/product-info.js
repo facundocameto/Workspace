@@ -104,18 +104,22 @@ document.addEventListener("DOMContentLoaded", function(e){
             if (name === "Chevrolet Onix Joy")
             {
               var num = 0;
+              var letter = "C";
             }
             else if (name === "Fiat Way")
             {
               var num = 1;
+              var letter = "F";
             }
             else if (name === "Suzuki Celerio")
             {
               var num = 2;
+              var letter = "S";
             }
             else
             {
               var num = 3;
+              var letter = "Z";
             }
 
             let productNameHTML  = document.getElementById("productName");
@@ -133,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
     });
 
-  getJSONData(PRODUCT_INFO_COMMENTS_URL_ + num).then(function(resultObj){
+  getJSONData(PRODUCT_INFO_COMMENTS_URL_ + letter).then(function(resultObj){
     if (resultObj.status === "ok"){
       comment = resultObj.data;
 
