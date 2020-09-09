@@ -21,7 +21,9 @@ if (scoreTxt > 0 && scoreTxt <= 5)
     comment=[];
 
     newComment.score = document.getElementById('score').value;
-    newComment.text = document.getElementById('text').value;
+    newComment.description = document.getElementById('text').value;
+    newComment.user = user;
+    newComment.dateTime = today;
 
     comment.push(newComment);
     sessionStorage.setItem('comment', JSON.stringify(comment));
@@ -35,8 +37,8 @@ if (scoreTxt > 0 && scoreTxt <= 5)
 
           htmlContentToAppend += `
             <div class="comment-section">
-              <h5 class="left-user">` + user + ` - <span class="score">` + fullComment[0].score + `/5</span>` + `</h5><p class="right-datetime">` + today + `</p>
-                <p class="comment-left">` + fullComment[0].text + `</p>
+              <h5 class="left-user">` + fullComment[0].user + ` - <span class="score">` + fullComment[0].score + `/5</span>` + `</h5><p class="right-datetime">` + fullComment[0].dateTime + `</p>
+                <p class="comment-left">` + fullComment[0].description + `</p>
             </div>
           `
 
