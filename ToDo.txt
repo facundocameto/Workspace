@@ -1,0 +1,6 @@
+-Inicio de sesión: mejorar lo visual
+-Barra Nav: soporte para celulares
+-logo: acomodar
+-cat autos: redireccionar a productos
+-Eliminar footer ceibal
+-Acomodar buscador y filtros para celular
