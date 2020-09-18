@@ -49,6 +49,8 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
   var usuario = document.getElementById("usuario");
+  var usuarioBars = document.getElementById("nextToBars");
+  usuarioBars.innerHTML += `<span class="p-1">`+ user + `</span>`;
   usuario.innerHTML = user;
   collapseExample.style.maxHeight = "0px";
 });
@@ -74,4 +76,14 @@ function delete_key()
 {
   sessionStorage.clear();
   window.location.replace("./login.html");
+}
+function openSideBar()
+{
+  var sideBar = document.getElementById("sideBar");
+  sideBar.style.display = "block";
+}
+function closeSideBar()
+{
+  var sideBar = document.getElementById("sideBar");
+  sideBar.style.display = "none";
 }

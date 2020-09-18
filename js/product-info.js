@@ -28,13 +28,30 @@ function showImagesGallery(array){
         htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
             <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + product[num].images[i] + `" alt="">
+                <img style="cursor: pointer;" class="img-fluid img-thumbnail" onclick="showBigImage(` + "`" + product[num].images[i] + "`" + `)" src="` + product[num].images[i] + `" alt="">
             </div>
         </div>
         `
 
         document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
     }
+}
+
+function showBigImage(imageId)
+{
+  var bigImageBox = document.getElementById("bigImageBox");
+  var htmlContentToAppend = "";
+
+
+  htmlContentToAppend = `
+  <div class="d-flex justify-content-center col-md-12">
+      <div class="d-block mb-4 h-100">
+          <img class="w-100" src="` + imageId + `" alt="">
+      </div>
+  </div>
+  `
+
+  bigImageBox.innerHTML = htmlContentToAppend;
 }
 
 function showRelatedProducts(array, products)

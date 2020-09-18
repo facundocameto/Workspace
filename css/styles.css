@@ -7,13 +7,12 @@
 }
 
 .jumbotron {
-  height: 50vh;
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
   background: url('../img/cover_back.png');
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   color: black;
   font-weight: bold;
@@ -23,6 +22,21 @@
   .jumbotron {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+  .bars
+  {
+    display: none;
+  }
+  #nextToBars
+  {
+    display: none;
+  }
+}
+@media (min-width: 1025px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    height: 50vh;
   }
 }
 
@@ -179,4 +193,26 @@ a.custom-card {
 .list-group-item
 {
   cursor: pointer;
+}
+.bars:active
+{
+  opacity: 50%;
+  display: block;
+}
+.sideBar
+{
+  background-color: aliceblue;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  z-index: 10000;
+  display: none;
+}
+.bars
+{
+  float: left;
 }

@@ -17,7 +17,19 @@
 </head>
 
 <body>
+  <div id="sideBar" class="sideBar">
+    <div onclick="closeSideBar()" class="mt-3"><a class="pl-1">Cerrar       </a><img src="img/cancel.png" width="10px" alt=""></div><hr>
+    <a class="pl-1" href="index.html">Inicio</a><hr>
+    <a class="pl-1" href="categories.html">Categorías</a><hr>
+    <a class="pl-1" href="products.html">Productos</a><hr>
+    <a class="pl-1" href="sell.html">Vender</a><hr>
+    <a class="pl-1" href="cart.html">Carrito</a><hr>
+    <a class="pl-1" href="my-profile.html">Mi perfil</a><hr>
+    <a class="pl-1" onclick="delete_key()" href="#">Cerrar sesión</a>
+  </div>
+  </div>
   <nav class="site-header sticky-top py-1 bg-dark">
+    <div class="ml-1"><img id="openBars" onclick="openSideBar()" class="p-1 bars" width="8%" src="img/menu.png" alt=""><div style="color: darkgrey;" id="nextToBars"></div></div>
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
@@ -58,6 +70,10 @@
           <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
           </div>
         </dd></div>
+        <div>
+          <div class="" id="bigImageBox">
+          </div>
+        </div>
         <div><dt class="images-title">Productos relacionados</dt>
         <dd>
           <div class="row text-center text-lg-left pt-2" id="relatedProducts">
