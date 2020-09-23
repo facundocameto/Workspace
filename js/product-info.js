@@ -24,7 +24,8 @@ function showProductInfo(productArray){
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
-            let commentConst = product.id + "_COMMENTS";
+            let commentConst = `"` + "https://facundocameto.github.io/Workspace/json/" + product.id + "_COMMENTS.json" + `"`;
+            console.log(commentConst);
             loadComments(commentConst);
             getJSONData(PRODUCTS_URL).then(function(resultObj2){
               if (resultObj2.status === "ok"){
