@@ -17,7 +17,6 @@
   color: black;
   font-weight: bold;
 }
-
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
