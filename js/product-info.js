@@ -1,11 +1,11 @@
 
 function showProductInfo(productArray){
 
-//get character clicked from URL
+//get product clicked from URL
   var params = new URLSearchParams(location.search);
   var nameURL = params.get('name');
 
-  //check what character is
+  //check what product is
     let htmlContentToAppend = "";
     for(let i = 0; i < productArray.length; i++){
         let product = productArray[i];
@@ -83,7 +83,7 @@ for(let i = 0; i < array.length; i++){
     htmlContentToAppend2 += `
     <div class="col-lg-3 col-md-4 col-6">
         <div class="pointer d-block mb-4 h-100">
-            <a href="product-info.html?name=` + array[times].name + `&id=` + product.id + `"><img class="img-fluid img-thumbnail" src="` + array[times].imgSrc + `" alt=""></a>
+            <a href="product-info.html?name=` + array[times].name + `"><img class="img-fluid img-thumbnail" src="` + array[times].imgSrc + `" alt=""></a>
         </div>
     </div>
     `
@@ -116,7 +116,7 @@ function loadComments(letter)
 });
 }
 
-//run showCharacterInfo if its all ok
+//run showProductInfo if its all ok
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
