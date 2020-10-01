@@ -214,4 +214,5 @@ a.custom-card {
 .bars
 {
   float: left;
+  max-width: 1.6rem;
 }
