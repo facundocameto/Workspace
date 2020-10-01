@@ -68,9 +68,23 @@
         <p class="lead">Este es tu carrito, gestiona tus compras.</p>
     </div>
     <div class="container">
+      <div class="row mb-5 p-2">
+        <div class="col-sm-2"></div>
+        <div class="col-8">
+          <div class="row">
+            <h4 class="col-sm-4 p-0">Nombre</h4>
+            <h4 class="col-sm-4 p-0">Costo</h4>
+            <h4 class="col-sm-4 p-0">Cantidad</h4>
+          </div>
+        </div>
+        <div style="flex-grow: 1; max-width: 100%;" class="col-2 p-0 text-right" style="float: right;"><h4>Subtotal</h4></div>
+      </div>
           <div class="row">
               <div class="list-group w-100" id="cart-list-container">
               </div>
+          </div>
+          <div class="row">
+            <div class="p-2"> <h3>Costo total: </h3> <h3 id="totalCostPlaceholder"></h3> </div>
           </div>
     </div>
   </main>
