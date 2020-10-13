@@ -79,14 +79,52 @@
         </div>
         <div style="flex-grow: 1; max-width: 100%;" class="col-2 p-0 text-right" style="float: right;"><h4>Subtotal</h4></div>
       </div>
-          <div style="border-bottom: 1px solid deeppink" class="row">
+          <div class="row">
               <div class="list-group w-100" id="cart-list-container">
               </div>
           </div>
+          <hr style="border-top: 1px solid deeppink">
+          <form class="">
+            <h3>Tipo de envío</h3>
+            <div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="premiumcheck">
+  <label class="form-check-label" for="premiumcheck">
+    Premium 2 a 5 días (15%)
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="expresscheck">
+  <label class="form-check-label" for="expresscheck">
+    Express 5 a 8 días (7%)
+  </label>
+</div>
+<div class="form-check disabled">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="standardcheck">
+  <label class="form-check-label" for="standardcheck">
+    Standard 12 a 15 días (5%)
+  </label></div>
+  <h3 class="mt-2">Dirección de envío</h3>
+  <div class="row">
+  <div class="col-md-4"><input class="form-control" type="text" placeholder="Calle"></div><div class="col-md-2"><input class="form-control" type="number" placeholder="Número"></div></div><br>
+  <div class="row"><div class="col-md-4"><input class="form-control" type="text" placeholder="Esquina"></div></div>
+          </form>
+          <hr style="border-top: 1px solid deeppink">
+          <h3>Costos</h3>
           <div class="row">
-            <div class="p-2"> <h3>Costo total: </h3> <h3 id="totalCostPlaceholder"></h3> </div>
+            <div class="col-12">
+              <h4 id="costoSubtotal"></h4>
+              <p>Costo unitario del producto por cantidad</p>
+            </div>
+            <div class="col-12">
+              <h4 id="costoDeEnvio"></h4>
+              <p>Según el tipo de envío</p>
+            </div>
+            <div class="col-12">
+              <h4 id="totalCostPlaceholder">Total ($)</h4>
+            </div>
           </div>
     </div>
+  </div>
   </main>
   <footer class="text-muted bg-light">
     <div class="container">

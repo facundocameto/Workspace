@@ -69,7 +69,7 @@ function currentCost(num, unitCost, currency)
 function currentTotalCost(totalCost)
 {
   var totalCostPlaceholder = document.getElementById("totalCostPlaceholder");
-  totalCostPlaceholder.innerHTML = "UYU " + totalCost;
+  totalCostPlaceholder.innerHTML = "Costo total: <span style=color:green;>" + totalCost + "</span>";
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
