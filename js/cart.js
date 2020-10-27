@@ -63,13 +63,37 @@ function currentCost(num, unitCost, currency)
 
   }
   var totalCost = newCost.reduce((a, b) => a + b, 0);
-  currentTotalCost(totalCost);
+  costs(totalCost);
 }
 
-function currentTotalCost(totalCost)
+function getTotalCost()
 {
+  var totalCostinn = document.getElementById("costoSubtotalPlaceholder").innerHTML;
+  costs(totalCostinn);
+}
+
+  function costs(totalCost)
+{
+    var costoSubtotalPlaceholder = document.getElementById("costoSubtotalPlaceholder");
+    costoSubtotalPlaceholder.innerHTML = totalCost;
+
+  var costoDeEnvioPlaceholder = document.getElementById("costoDeEnvioPlaceholder");
+  var premiumcheck = document.getElementById("premiumcheck");
+  var expresscheck = document.getElementById("expresscheck");
+  var standardcheck = document.getElementById("standardcheck");
+  if (premiumcheck.checked == true){
+  costoDeEnvioPlaceholder.innerHTML = (totalCost*15)/100;
+  }
+  else if (expresscheck.checked == true){
+  costoDeEnvioPlaceholder.innerHTML = (totalCost*7)/100;
+  }
+  else if (standardcheck.checked == true){
+  costoDeEnvioPlaceholder.innerHTML = (totalCost*5)/100;
+  }
+
+  var costoDeEnvio = document.getElementById("costoDeEnvioPlaceholder").innerHTML;
   var totalCostPlaceholder = document.getElementById("totalCostPlaceholder");
-  totalCostPlaceholder.innerHTML = "Costo total: <span style=color:green;>" + totalCost + "</span>";
+  totalCostPlaceholder.innerHTML = Number(costoDeEnvio) + Number(totalCost);
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de

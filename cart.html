@@ -84,43 +84,92 @@
               </div>
           </div>
           <hr style="border-top: 1px solid deeppink">
-          <form class="">
+          <form>
             <h3>Tipo de envío</h3>
             <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="premiumcheck">
-  <label class="form-check-label" for="premiumcheck">
-    Premium 2 a 5 días (15%)
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="expresscheck">
-  <label class="form-check-label" for="expresscheck">
-    Express 5 a 8 días (7%)
-  </label>
-</div>
-<div class="form-check disabled">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="standardcheck">
-  <label class="form-check-label" for="standardcheck">
-    Standard 12 a 15 días (5%)
-  </label></div>
-  <h3 class="mt-2">Dirección de envío</h3>
-  <div class="row">
-  <div class="col-md-4"><input class="form-control" type="text" placeholder="Calle"></div><div class="col-md-2"><input class="form-control" type="number" placeholder="Número"></div></div><br>
-  <div class="row"><div class="col-md-4"><input class="form-control" type="text" placeholder="Esquina"></div></div>
-          </form>
+              <input onclick="getTotalCost()" class="form-check-input" type="radio" name="exampleRadios" id="premiumcheck" required>
+              <label onclick="getTotalCost()" class="form-check-label" for="premiumcheck">
+                Premium 2 a 5 días (15%)
+              </label>
+            </div>
+            <div class="form-check">
+              <input onclick="getTotalCost()" class="form-check-input" type="radio" name="exampleRadios" id="expresscheck" required>
+              <label onclick="getTotalCost()" class="form-check-label" for="expresscheck">
+                Express 5 a 8 días (7%)
+              </label>
+            </div>
+            <div class="form-check">
+              <input onclick="getTotalCost()" class="form-check-input" type="radio" name="exampleRadios" id="standardcheck" required>
+              <label onclick="getTotalCost()" class="form-check-label" for="standardcheck">
+                Standard 12 a 15 días (5%)
+              </label></div>
+              <h3 class="mt-2">Dirección de envío</h3>
+              <div class="row">
+              <div class="col-md-4"><input class="form-control" type="text" placeholder="Calle" required></div><div class="col-md-2"><input class="form-control" type="number" placeholder="Número" required></div></div><br>
+              <div class="row"><div class="col-md-4"><input class="form-control" type="text" placeholder="Esquina" required></div></div>
           <hr style="border-top: 1px solid deeppink">
           <h3>Costos</h3>
           <div class="row">
             <div class="col-12">
-              <h4 id="costoSubtotal"></h4>
+              <h5>Subtotal: <span id="costoSubtotalPlaceholder" style="color:green;"></span></h5>
               <p>Costo unitario del producto por cantidad</p>
             </div>
             <div class="col-12">
-              <h4 id="costoDeEnvio"></h4>
+              <h5>Costo de envío: <span id="costoDeEnvioPlaceholder" style="color:green;"></span></h5>
               <p>Según el tipo de envío</p>
             </div>
             <div class="col-12">
-              <h4 id="totalCostPlaceholder">Total ($)</h4>
+              <h5>Costo total: <span id="totalCostPlaceholder" style="color:green"></span></h5>
+            </div>
+          </div>
+          <hr style="border-top: 1px solid deeppink">
+          <div class="row">
+            <div class="col-12">
+              <h4>Forma de pago</h4>
+              <p id="formaDePago"></p><a href="" data-toggle="modal" data-target="#exampleModal">Seleccionar</a>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Forma de pago</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <form>
+                    <div class="modal-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="creditCardCheck" required>
+                        <label class="form-check-label" for="creditCardCheck">
+                          Tarjeta de crédito
+                        </label>
+                      </div>
+                      <hr style="border-top: 1px solid deeppink">
+                      <div class="row">
+                      <div class="col-md-8"><input class="form-control" type="number" placeholder="Numero de Tarjeta" required></div><div class="col-md-4"><input class="form-control" type="number" placeholder="Código de seg." required></div></div><br>
+                      <div class="row"><div class="col-md-6"><input class="form-control" type="text" placeholder="Vencimiento (MM/AA)" required></div></div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="bankCheck" required>
+                        <label class="form-check-label" for="bankCheck">
+                          Transferencia bancaria
+                        </label>
+                      </div>
+                      <hr style="border-top: 1px solid deeppink">
+                      <div class="row">
+                      <div class="col-md-8"><input class="form-control" type="number" placeholder="Número de cuenta"></div></div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary mt-4">Finalizar compra</button>
+            </form>
             </div>
           </div>
     </div>
