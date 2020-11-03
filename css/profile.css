@@ -1,0 +1,11 @@
+.inputImg
+{
+  cursor: pointer;
+  background-color: green;
+  border-color: green;
+}
+.inputImg:hover
+{
+  background-color: #C0C0C0;
+  border-color: green;
+}

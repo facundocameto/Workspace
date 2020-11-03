@@ -7,6 +7,7 @@ function saveData()
   var apellido2 = document.getElementById("apellido2").value;
   var userEmail = document.getElementById("userEmail").value;
   var numeroTelefono = document.getElementById("numeroTelefono").value;
+  var perfImg = document.getElementById("perfImg").path;
 
   var userData = new Object();
   userDataJson = [];
@@ -17,11 +18,23 @@ function saveData()
   userData.apellido2 = apellido2;
   userData.userEmail = userEmail;
   userData.numeroTelefono = numeroTelefono;
+  userData.perfImg = perfImg;
 
   userDataJson.push(userData);
 
   sessionStorage.removeItem("userData");
   sessionStorage.setItem("userData", JSON.stringify(userDataJson));
+
+  var userDataVar = sessionStorage.getItem("userData");
+  var userDataObject = JSON.parse(userDataVar);
+  document.getElementById("perfImgPlaceholder").innerHTML = `<img src="` + userDataObject[0].perfImg + `">`;
+
+  document.getElementById("alertResult").classList.remove("fade");
+  document.getElementById("saveDataButton").disabled = true;
+  setTimeout(function () {
+    document.getElementById("alertResult").classList.add("fade");
+    document.getElementById("saveDataButton").disabled = false;
+  }, 1800);
 
 }
 
@@ -31,10 +44,11 @@ function saveData()
 document.addEventListener("DOMContentLoaded", function (e) {
   var userDataVar = sessionStorage.getItem("userData");
   var userDataObject = JSON.parse(userDataVar);
-  var nombre1 = document.getElementById("nombre1").value = userDataObject[0].nombre1;
-  var nombre2 = document.getElementById("nombre2").value = userDataObject[0].nombre2;
-  var apellido1 = document.getElementById("apellido1").value = userDataObject[0].apellido1;
-  var apellido2 = document.getElementById("apellido2").value = userDataObject[0].apellido2;
-  var userEmail = document.getElementById("userEmail").value = userDataObject[0].userEmail;
-  var numeroTelefono = document.getElementById("numeroTelefono").value = userDataObject[0].numeroTelefono;
+  document.getElementById("nombre1").value = userDataObject[0].nombre1;
+  document.getElementById("nombre2").value = userDataObject[0].nombre2;
+  document.getElementById("apellido1").value = userDataObject[0].apellido1;
+  document.getElementById("apellido2").value = userDataObject[0].apellido2;
+  document.getElementById("userEmail").value = userDataObject[0].userEmail;
+  document.getElementById("numeroTelefono").value = userDataObject[0].numeroTelefono;
+  document.getElementById("perfImgPlaceholder").innerHTML = `<img src="` + userDataObject[0].perfImg + `">`;
 });

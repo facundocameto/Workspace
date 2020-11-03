@@ -31,6 +31,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link href="css/profile.css" rel="stylesheet">
 </head>
 
 <body>
@@ -67,21 +68,20 @@
           <h2>Mi perfil</h2>
       </div>
       <div class="container">
+        <div id="perfImgPlaceholder"></div>
         <form>
+          <div class="row d-flex justify-content-center"><div class="col-md-4 text-center"><label class="inputImg btn btn-primary" for="perfImg">Choose image</label><input style="opacity: 0;" id="perfImg" type="file" name="img" accept="image/*"></div></div>
           <div class="row d-flex justify-content-center">
           <div class="col-md-4"><input id="nombre1" class="form-control" type="text" placeholder="Nombre"></div><div class="col-md-4"><input id="nombre2" class="form-control" type="text" placeholder="Segundo nombre"></div></div><br>
           <div class="row d-flex justify-content-center"><div class="col-md-4"><input id="apellido1" class="form-control" type="text" placeholder="Apellido"></div><div class="col-md-4"><input id="apellido2" class="form-control" type="text" placeholder="Segundo apellido"></div></div><br>
           <div class="row d-flex justify-content-center"><div class="col-md-4"><input id="userEmail" class="form-control" type="email" placeholder="E-mail"></div></div><br>
           <div class="row d-flex justify-content-center"><div class="col-md-4"><input id="numeroTelefono" class="form-control" type="number" placeholder="Teléfono de contacto"></div></div><hr>
-          <div class="row d-flex justify-content-center"><button onclick="saveData()" class="btn btn-primary" type="button" name="button">Guardar</button></div>
+          <div class="row d-flex justify-content-center"><button id="saveDataButton" onclick="saveData()" class="btn btn-primary" type="button" name="button">Guardar</button></div>
         </form>
       </div>
   </main>
   <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+    <span class="text-center" id="resultSpan">Cambios guardados correctamente</span>
   </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
