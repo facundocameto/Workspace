@@ -7,7 +7,6 @@ function saveData()
   var apellido2 = document.getElementById("apellido2").value;
   var userEmail = document.getElementById("userEmail").value;
   var numeroTelefono = document.getElementById("numeroTelefono").value;
-  var perfImg = document.getElementById("perfImg").path;
 
   var userData = new Object();
   userDataJson = [];
@@ -18,7 +17,6 @@ function saveData()
   userData.apellido2 = apellido2;
   userData.userEmail = userEmail;
   userData.numeroTelefono = numeroTelefono;
-  userData.perfImg = perfImg;
 
   userDataJson.push(userData);
 
@@ -27,7 +25,6 @@ function saveData()
 
   var userDataVar = sessionStorage.getItem("userData");
   var userDataObject = JSON.parse(userDataVar);
-  document.getElementById("perfImgPlaceholder").innerHTML = `<img src="` + userDataObject[0].perfImg + `">`;
 
   document.getElementById("alertResult").classList.remove("fade");
   document.getElementById("saveDataButton").disabled = true;
@@ -50,5 +47,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
   document.getElementById("apellido2").value = userDataObject[0].apellido2;
   document.getElementById("userEmail").value = userDataObject[0].userEmail;
   document.getElementById("numeroTelefono").value = userDataObject[0].numeroTelefono;
-  document.getElementById("perfImgPlaceholder").innerHTML = `<img src="` + userDataObject[0].perfImg + `">`;
 });
